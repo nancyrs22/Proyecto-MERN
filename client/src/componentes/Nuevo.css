@@ -4,7 +4,7 @@
 }
 
 .container-p{
-    background-color: aqua;
+    
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -16,7 +16,7 @@
 }
 
 .container-top{
-    background-color: blueviolet;
+    background-color: #5B9CCF;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -26,33 +26,45 @@
     padding: 10px;
 }
 
+.foto{
+    max-width: 30%;
+    width: 100%;
+}
+
 .f-perfil{
-    border-radius: 50px;
-    width: 100px;
+    border-radius: 50%;
+    border: 5px solid white;
+    max-width: 100%;
+    height: auto;
 }
 
 .d-personales{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    border-left: 2px solid;
+    border-right: 2px solid;
+    margin-left: 5px;
+    margin-right: 5px;
+    align-items: center;
+    padding: 10px;
 }
 
 .d-contacto{
-    background-color: darkorange;
+    /* background-color: darkorange; */
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 
 }
 
 .enlaces{
-    background-color: darkgreen;
+    /* background-color: darkgreen; */
     height: 100%;
     max-height: 60%;
 }
 
 .contacto{
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
     height: 100%;
     max-height: 60%;
 }
@@ -66,11 +78,12 @@
     width: 100%;
     max-width: 100%;
     justify-content: space-between;
-    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .area{
-    background-color: sandybrown;
+    background-color: lightgray;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,7 +102,7 @@
 }
 
 .acciones{
-    background-color: tomato;
+    background-color: #5B9CCF;
     width: 100%;
     display: flex;
     flex-direction: row;

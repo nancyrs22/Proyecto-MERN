@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {Link, useParams} from "react-router-dom";
 import axios from "axios";
-import './Nuevo.css'
+import './Nuevo.css';
 
 const Portafolio = () => {
     const {id} = useParams();
@@ -40,9 +40,9 @@ const Portafolio = () => {
                     </div>
 
                     <div className="contacto">
-                        <p>{portafolio.email}</p>
-                        <p>{portafolio.telefono}</p>
-                        <p>{portafolio.ubicacion}</p>  
+                        <p><img src="imagenes/email.png" ></img>{portafolio.email}</p>
+                        <p><img src="imagenes/telef.png" ></img>{portafolio.telefono}</p>
+                        <p><img src="imagenes/ubicacion.png" ></img>{portafolio.ubicacion}</p>  
                     </div>
                 </div>
             </div>
@@ -50,18 +50,19 @@ const Portafolio = () => {
             <div className="container-bot">
                 <div className="area">
                     {portafolio.listaTi?.map((item,i) => (
-                    <div key={i} className="area">
+                    <div key={i} className="d-titulo">
                         <span className="titulo">{item.text}</span>
                         
-                        {portafolio.listaCon?.map((item,j) => (
-                        <div key={j} className="contenido">
-                            <span>{item.text}</span>
-                        </div>
-                    ))}
+
                     </div>
                     ))}
                     
-
+                    {portafolio.listaCon?.map((item,j) => (
+                        <div key={j} className="d-contenido">
+                            <span className="contenido">{item.text}</span>
+                        </div>
+                    ))}
+                    
                 </div>
 
             </div>

@@ -42,8 +42,17 @@ const TodosPortafolios = () => {
                                 <td><img className="img-fluid" src={portafolio.imagen} /></td>
                                 <td><Link to={`/portafolio/${portafolio._id}`}>{portafolio.apellido}, {portafolio.nombre}</Link></td>
                                 <td>{portafolio.cargo}</td>
-                                <td>{portafolio.enlaces}</td>
                                 
+                                <div className="d-contacto">
+                                <div className="enlaces">
+                                {portafolio.listaEn?.map((item,i) => (
+                                <div key={i}>
+                                <span>{item.text}</span>
+                                </div>
+                                ))}
+                                </div>
+                                </div>
+
                                 <td>
                                     <button className="btn btn-danger" onClick={() => borrarPortafolio(portafolio._id)}>Elimiar</button>
                                     

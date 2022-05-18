@@ -104,13 +104,10 @@ const NuevoPortafolio = () => {
                     {errors.ubicacion ? <span className="text-danger">{errors.ubicacion.message}</span> : null}
                 </div>
 
-                {/* <div className="form-group">
-                    <label htmlFor="enlaces">Enlace:</label>
-                    <input type="text" id="enlaces" name="enlaces" value={enlaces} onChange={(e) => setEnlaces(e.target.value)}></input>
-                </div> */}
 
                 <div>
                     <div>
+                        <p>Enlaces de Portafolio</p>
                         {listaEn.map((item, i)=> (
                             <div key={i}>
                                 <span>{item.text}</span>    
@@ -124,14 +121,11 @@ const NuevoPortafolio = () => {
                     </div>
                 </div>
 
-                {/* <div className="form-group">
-                    <label htmlFor="titulo">Titulo:</label>
-                    <input type="text" id="titulo" name="titulo" value={titulo} onChange={(e) => setTitulo(e.target.value)}></input>
-                    {errors.titulo ? <span className="text-danger">{errors.titulo.message}</span> : null}
-                </div> */}
+
 
                 <div>
                     <div>
+                        <p>Campos que deseas</p>
                         {listaTi.map((item, i)=> (
                             <div key={i}>
                                 <span>{item.text}</span>    
@@ -144,12 +138,43 @@ const NuevoPortafolio = () => {
                         <button type="button" onClick={() => addTitulo(titulo)}>Add Titulo</button>
                     </div>
                 </div>
-{/* 
-                <div className="form-group">
-                    <label htmlFor="contenido">Contenido:</label>
-                    <input type="text" id="contenido" name="contenido" value={contenido} onChange={(e) => setContenido(e.target.value)}></input>
-                    {errors.contenido ? <span className="text-danger">{errors.contenido.message}</span> : null}
+
+
+
+                {/* <div>
+                    <div>
+                        <p>Campos que deseas</p>
+                        {listaTi.map((item, i)=> (
+                            <div key={i}>
+                                <span>{item.text}</span>
+
+
+                                <div>
+                                    <div>
+                                        {listaCon.map((item, j)=> (
+                                        <div key={j}>
+                                            <span>{item.text}</span>    
+                                        </div>
+                                        ))}
+                                    </div>
+                                <div>
+                                    <input onChange={e => setContenido(e.target.value)}
+                                    value={contenido}></input>
+                                    <button type="button" onClick={() => addContenido(contenido)}>Add Contenido</button>
+                                </div>
+                            </div>
+
+
+                            </div>
+                        ))}
+                    </div>
+                    <div>
+                        <input onChange={e => setTitulo(e.target.value)}
+                        value={titulo}></input>
+                        <button type="button" onClick={() => addTitulo(titulo)}>Add Titulo</button>
+                    </div>
                 </div> */}
+
 
                 <div>
                     <div>
