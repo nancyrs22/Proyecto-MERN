@@ -8,7 +8,7 @@ const Portafolio = () => {
     const [portafolio, setPortafolio] = useState({});
 
     useEffect(() => {
-        axios.get("http://localhost:8000/api/portafolios/"+id)
+        axios.get("http://localhost:8000/api/portafolios/"+id, {withCredentials:true})
             .then(res => {
                 console.log(res.data);
                 setPortafolio(res.data);
@@ -40,9 +40,9 @@ const Portafolio = () => {
                     </div>
 
                     <div className="contacto">
-                        <p><img src="imagenes/email.png" ></img>{portafolio.email}</p>
-                        <p><img src="imagenes/telef.png" ></img>{portafolio.telefono}</p>
-                        <p><img src="imagenes/ubicacion.png" ></img>{portafolio.ubicacion}</p>  
+                        <p><img src={process.env.PUBLIC_URL + '/static/imagenes/email.png'} className="icono" />{portafolio.email}</p>
+                        <p><img src={process.env.PUBLIC_URL + '/static/imagenes/telef.png'} className="icono" ></img>{portafolio.telefono}</p>
+                        <p><img src={process.env.PUBLIC_URL + '/static/imagenes/ubicacion.png'} className="icono"></img>{portafolio.ubicacion}</p>  
                     </div>
                 </div>
             </div>

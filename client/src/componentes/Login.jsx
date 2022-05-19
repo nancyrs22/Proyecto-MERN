@@ -59,8 +59,12 @@ const Login = () => {
     }
 
     return (
-        <div className="row">
-            <div className="col-6">
+        <div >
+            <img src={process.env.PUBLIC_URL + '/static/imagenes/fondo.png'} className="img-fondo-login"/>
+            <div className="base">
+
+            
+            <div className="col-6-1">
                 <h2>Registro</h2>
                 <form onSubmit={registro}>
                     <div className="form-group">
@@ -91,7 +95,7 @@ const Login = () => {
                     <input type="submit" value="Registrarme" className="btn btn-primary" />
                 </form>
             </div>
-            <div className="col-6">
+            <div className="col-6-2">
                 <h2>Iniciar Sesión</h2>
                 <form onSubmit={login}>
                     <div className="form-group">
@@ -108,7 +112,7 @@ const Login = () => {
                     <input type="submit" value="Iniciar Sesión" className="btn btn-primary" />
                 </form>
             </div>
-
+            </div>
         </div>
     )
 

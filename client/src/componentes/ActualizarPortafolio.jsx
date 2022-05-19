@@ -26,7 +26,7 @@ const ActualizarPortafolio = () => {
     const history = useHistory();
 
     useEffect(() => {
-        axios.get("http://localhost:8000/api/portafolios/"+id)
+        axios.get("http://localhost:8000/api/portafolios/"+id, {withCredentials:true})
             .then(res => {
                 setNombre(res.data.nombre);
                 setApellido(res.data.apellido);
@@ -43,7 +43,7 @@ const ActualizarPortafolio = () => {
                 setListaCon(res.data.listaCon);
             })
             .catch(err=>console.log(err));
-    },[])
+    },[id,history])
 
     function addTitulo(titulo){
         

@@ -1,6 +1,86 @@
 .container-total{
-    margin: 10px;
     height: 1000px;
+}
+
+.img-fondo
+{
+    /* background-image: url('/static/imagenes/fondo.png'); */
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    z-index: -1;
+    position: absolute;
+}
+
+.img-fondo-login
+{
+    /* background-image: url('/static/imagenes/fondo.png'); */
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    opacity: 0.5;
+    z-index: -1;
+    position: absolute;
+}
+
+.presentacion{
+    display: flex;
+    height: 920px;
+    align-content: center;
+    justify-content: center;
+    align-items: center
+}
+
+.frases{
+    background-color: black;
+    opacity: 0.8;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 30%;
+    border-radius: 20px;
+    border: 5px solid;
+    padding: 10px;
+}
+
+.base{
+    display: flex;
+    flex-direction: row;
+    height: 920px;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.col-6-1{
+    background-color: black;
+    opacity: 0.8;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 5px solid;
+    padding: 10px;
+    width: 40%;
+}
+
+.col-6-2{
+    background-color: black;
+    opacity: 0.8;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 5px solid;
+    padding: 10px;
+    width: 40%;
 }
 
 .container-p{
@@ -61,6 +141,10 @@
     /* background-color: darkgreen; */
     height: 100%;
     max-height: 60%;
+}
+
+.icono{
+    width: 30px;
 }
 
 .contacto{

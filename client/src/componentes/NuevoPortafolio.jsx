@@ -59,9 +59,17 @@ const NuevoPortafolio = () => {
         axios.post("http://localhost:8000/api/portafolios", {
             nombre, apellido, imagen, cargo, email, telefono,
             ubicacion, listaEn, listaTi, listaCon
-        })
+        }, {withCredentials:true})
             .then(res => history.push("/"))
-            .catch(err => {setErrors(err.response.data.errors);
+            .catch(err => {
+                if(err.response.status === 401)
+                {
+                    history.push("/login")
+                }
+                else{
+                    setErrors(err.response.data.errors);
+
+                }
             });
     }
 
