@@ -24,6 +24,9 @@ const NuevoPortafolio = () => {
     const [errors, setErrors] = useState({});
     const history = useHistory();
 
+
+
+
     function addTitulo(titulo){
         
 
@@ -75,6 +78,11 @@ const NuevoPortafolio = () => {
 
     return(
         <div>
+
+            <img src={process.env.PUBLIC_URL + '/static/imagenes/fondo-lista.png'} className="img-fondo-login"/>
+        
+        <div className="col-6-1">
+
             <h1>Nuevo Portafolio</h1>
             <form onSubmit={guardarPortafolio}>
                 <div className="form-group">
@@ -205,6 +213,7 @@ const NuevoPortafolio = () => {
 
 
             <Link to="/" className="btn btn-primary">Back</Link>
+        </div>
         </div>
     )
 }

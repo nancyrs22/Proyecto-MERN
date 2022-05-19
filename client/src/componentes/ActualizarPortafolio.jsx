@@ -91,7 +91,7 @@ const ActualizarPortafolio = () => {
         e.preventDefault();
         axios.put("http://localhost:8000/api/portafolios/"+id,{
             nombre,apellido, imagen, cargo, email, telefono, ubicacion, listaEn, listaTi, listaCon
-        })
+        },{withCredentials:true})
         .then(res => history.push("/portafolio/"+id))
         .catch(err=>console.log(err));
     }

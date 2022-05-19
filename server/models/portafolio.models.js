@@ -64,6 +64,15 @@ const EsquemaPortafolio = new mongoose.Schema({
 
     listaCon:{
         type: Array
+    },
+
+    campo: {
+        type:Object,
+        properties:
+        {
+            titulo:String,
+            contenido: Array
+        }
     }
 }, {timestamps: true, versionKey: false})
 

@@ -14,6 +14,18 @@
     position: absolute;
 }
 
+.img-fondo-lista
+{
+    background-repeat: repeat;
+    /* height: 100%; */
+    /* width: 100%; */
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    z-index: -1;
+    position: absolute;
+    opacity: 0.5;
+}
+
 .img-fondo-login
 {
     /* background-image: url('/static/imagenes/fondo.png'); */
@@ -25,6 +37,12 @@
     opacity: 0.5;
     z-index: -1;
     position: absolute;
+}
+
+.img-lista{
+    height: 200px;
+    width: auto;
+    max-height: 100%;
 }
 
 .presentacion{
@@ -102,20 +120,18 @@
     width: 100%;
     max-width: 100%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 10px;
 }
 
-.foto{
-    max-width: 30%;
-    width: 100%;
-}
+
 
 .f-perfil{
     border-radius: 50%;
     border: 5px solid white;
-    max-width: 100%;
-    height: auto;
+    height: 200px;
+    width: auto;
+    max-height: 100%;
 }
 
 .d-personales{
@@ -127,6 +143,7 @@
     margin-right: 5px;
     align-items: center;
     padding: 10px;
+    width: 45%;
 }
 
 .d-contacto{
@@ -154,7 +171,6 @@
 }
 
 .container-bot{
-    background-color: yellow;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -178,6 +194,8 @@
 
 .d-titulo{
     display: flex;
+    background-color: lightgrey;
+    padding: 10px;
 }
 
 .d-contenido{

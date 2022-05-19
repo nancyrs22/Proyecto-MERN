@@ -14,7 +14,7 @@ const TodosPortafolios = () => {
     },[])
 
     const borrarPortafolio = idPortafolio => {
-        axios.delete("http://localhost:8000/api/portafolios/"+idPortafolio)
+        axios.delete("http://localhost:8000/api/portafolios/"+idPortafolio,{withCredentials:true})
         .then(res => {
             let nuevaLista = portafolios.filter(portafolio => portafolio._id !== idPortafolio);
             setPortafolios(nuevaLista);
@@ -23,6 +23,7 @@ const TodosPortafolios = () => {
 
     return(
         <div>
+            <img src={process.env.PUBLIC_URL + '/static/imagenes/fondo-lista.png'} className="img-fondo-lista"/>
             <h1>Portafolios</h1>
             <Link className="btn btn-success" to="/nuevo">Agregar Portafolio</Link>
             <ButtonLogout />
@@ -40,7 +41,7 @@ const TodosPortafolios = () => {
                     {
                         portafolios.map((portafolio, index) => (
                             <tr key={index}>
-                                <td><img className="img-fluid" src={portafolio.imagen} /></td>
+                                <td><img className="img-lista" src={portafolio.imagen} /></td>
                                 <td><Link to={`/portafolio/${portafolio._id}`}>{portafolio.apellido}, {portafolio.nombre}</Link></td>
                                 <td>{portafolio.cargo}</td>
                                 <td>

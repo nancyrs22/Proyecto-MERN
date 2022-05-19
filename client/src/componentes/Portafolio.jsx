@@ -20,6 +20,8 @@ const Portafolio = () => {
 
         
         <div className="container-p">
+                        <img src={process.env.PUBLIC_URL + '/static/imagenes/fondo-lista.png'} className="img-fondo-lista"/>
+
             <div className="container-top">
                 <div className="foto">
                     <img className="f-perfil" src ={portafolio.imagen}></img>
@@ -48,7 +50,7 @@ const Portafolio = () => {
             </div>
 
             <div className="container-bot">
-                <div className="area">
+                {/* <div className="area"> */}
                     {portafolio.listaTi?.map((item,i) => (
                     <div key={i} className="d-titulo">
                         <span className="titulo">{item.text}</span>
@@ -57,13 +59,13 @@ const Portafolio = () => {
                     </div>
                     ))}
                     
-                    {portafolio.listaCon?.map((item,j) => (
+                    {/* {portafolio.listaCon?.map((item,j) => (
                         <div key={j} className="d-contenido">
                             <span className="contenido">{item.text}</span>
                         </div>
-                    ))}
+                    ))} */}
                     
-                </div>
+                {/* </div> */}
 
             </div>
 
